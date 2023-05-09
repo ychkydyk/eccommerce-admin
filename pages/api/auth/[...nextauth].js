@@ -32,6 +32,6 @@ export async function isAdminRequest(req,res) {
   if (!adminEmails.includes(session?.user?.email)) {
     res.status(401);
     res.end();
-    throw 'not an admin';
+    throw 'Нет прав администратора';
   }
 }
